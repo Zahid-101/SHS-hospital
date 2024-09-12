@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHS Hospital - Home</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/pharmacies.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="logo-wrapper">
+        <a href="index.html"><div class="logo">SHS</div></a>
+        <div class="search">
+          <form>
+            <input type="text" placeholder="Search..." />
+            <label for="submit-search">
+              <span class="search-icon">🔍</span>
+            </label>
+
+            <button
+              type="submit"
+              id="submit-search"
+              style="display: none"
+            ></button>
+          </form>
+        </div>
+        <div class="emergency-contact">
+          <span class="emergency-number">911</span>
+          <span class="emergency-icon">📞</span>
+        </div>
+      </div>
+      <hr class="separator" />
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pharmacy.html">Buy medicine</a></li>
+          <li><a href="login.html">My account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="separator1"></div>
+      <section class="image-text-container">
+        <img src="pharmacy.jpg" alt="An image of the hospital pharmacy" />
+        <div class="text-container">
+          <h2>Our stores are available now!</h2>
+          <p>
+            Our dedicated team of pharmacists will suit your needs wherever you are.
+           <br />We'll deliver your medicine right to your doorstep.
+             <br />We ensure and dedicate ourselves to the highest standards possible for your service.
+          </p>
+        </div>
+        </section>
+      <section class="medicine-order-form">
+        <h3>Medicine order request form</h3>
+        <p>We ship within 2 working days</p>
+
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="contact-info">Email or Mobile Number:</label>
+        <input type="text" id="contact-info" name="contact-info" required>
+
+        <label for="medicine-choice">Select Medicine:</label>
+        <select id="medicine-choice" name="medicine-choice">
+            <option value="Medicine 1">Penicillin</option>
+            <option value="Medicine 2">Paracetemol</option>
+            <option value="Medicine 3">Cetriset</option>
+        </select>   
+
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method">
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="Card Payment">Card Payment</option>
+        </select>
+
+        <label for="delivery-method">Delivery Method:</label>
+        <div class="radio-group">
+            <input type="radio" id="pickup-at-pharmacy" name="delivery-method" value="Pickup at Pharmacy" checked>
+            <label for="pickup-at-pharmacy">Pickup at Pharmacy</label>
+            <input type="radio" id="delivery" name="delivery-method" value="Delivery">
+            <label for="delivery">Delivery</label>
+        </div>
+
+        <label for="address">Address (for Delivery):</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="terms-and-conditions">
+            <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+            I agree to the Terms and Conditions
+        </label>   
+
+        <p><a href="#">Read our Terms and Conditions</a></p>
+
+        <button type="submit">Submit</button>
+    </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-media">
+          <a href="https://twitter.com">
+            <img src="twitter.png" alt="Twitter logo" />
+          </a>
+          <a href="https://instagram.com">
+            <img src="instagram.png" alt="Instagram logo" />
+          </a>
+          <a href="https://youtube.com">
+            <img src="youtube.png" alt="Youtube logo" />
+          </a>
+          <a href="https://linkedin.com">
+            <img src="linkedin.png" alt="Linkedin logo" />
+          </a>
+        </div>
+        <div class="logo-wrapper">
+          <a href="index.html"><div class="logo">SHS</div></a>
+        </div>
+      </div>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="consultation.html">Consultations</a></li>
+        <li><a href="pharmacy.html">Buy medicine</a></li>
+        <li><a href="login.html">My account</a></li>
+      </ul>
+      <p>&copy; 2024 SHS Hospital. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

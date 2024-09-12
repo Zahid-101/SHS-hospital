@@ -1,0 +1,177 @@
+* {
+    padding: 0; /*resetting the defaults of the browser*/
+    margin: 0;
+}
+:root {
+    --primary-color: #007;
+    --secondary-color: #f2f2f2;
+    --tertiary-color: #ccc;
+}
+@media (max-width: 600px) { 
+    .image-text-container{
+        flex-direction: column !important; /* Stack image on top, puts text below and override anyother styles*/
+    }
+    .text-container{
+        text-align: center !important; 
+    }
+    .separator1{
+        height:125px;
+    }
+}
+main {
+    padding: 20px;
+}
+
+body {
+
+    font-family: sans-serif, Arial;
+    margin:0; /*resetting the defaults of the body,(maybe for overwriting unknowingly) just in case*/
+    padding:0;
+    scroll-behavior: smooth;
+}
+h1,h2,h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100dvw;
+    z-index: 100;/*to keep infront of everything*/
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;       /* padding,space inside the box */
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-right: 100px;/*spacing between the search bar and emergency*/
+}
+header .logo:hover{
+    box-shadow: 0 0 30px rgba(0 , 123, 255, 0.6);
+}
+header .logo-wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+header .logo-wrapper a {  
+    text-decoration: none;  /* Removing the underline */
+    color: #007bff;    
+  }
+header .search-icon{
+    cursor: pointer;
+    position: relative;
+    left: 200px;
+    bottom: 35px;
+  }
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    right: 20px;
+    margin-right: 100px;/*spacing between the logo and emergency tag*/
+}
+
+.search input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.emergency-contact {
+    background-color: #f2f2f2; 
+    color: #dc3545;
+    padding: 17px 0px 0px 11px; /* Adjust for desired size */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* for mobile friendliness */
+    font-weight: bold;
+    text-align: center;
+    }
+
+.emergency-icon {
+    margin-right: 5px; /* Space between icon and number */
+
+}
+.separator {
+    border: 2px solid #fff; /*size of the border separator*/
+    width: 42%; /* the span(width) of the line  */
+    height: 2px; 
+    background-color: #fff; 
+    margin: 10px 0; /* separates away(gives space) from the header wrapper and nav bar */
+    margin-right: 40px;
+  }
+header nav {
+    display: flex;
+    overflow: hidden;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-decoration: underline 0.15rem rgba(255, 255, 255, 0);
+    transition: text-decoration-color 700ms;      
+}
+
+
+header nav ul li a:hover {
+    text-decoration: underline .15rem rgba(255, 255, 255, 1);
+}
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: inherit;/*stops the colour from being like a link and take it from the original element instead*/
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    filter:invert(100%);
+}
+footer .logo-wrapper{
+    
+}
+footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-links ul li a {
+    color: #fff;
+}

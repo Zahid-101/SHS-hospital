@@ -1,0 +1,71 @@
+
+.separator1 {
+    height: 125px; 
+  }
+.image-text-container {
+    display: flex; /* Using flexbox for horizontal layout */
+    align-items: center; 
+    margin: 30px 0;
+    flex-direction: row-reverse/*to flip the layout*/
+}
+
+.image-text-container img {
+    width: 600px; 
+    margin-right: 20px; /* Create space between the image and text */
+}
+
+.text-container {
+    flex-grow: 1; /* text container to expand to fill the remaining space */
+    text-align: left; 
+    font-size: 18px;
+}
+h2 { 
+    display: none; 
+}
+@media (max-width: 600px){
+    h2{
+        display: block;
+    }
+}
+.medicine-order-form {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.medicine-order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.medicine-order-form input, .medicine-order-form textarea, .medicine-order-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.medicine-order-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.medicine-order-form p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.medicine-order-form .radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.medicine-order-form .radio-group input[type="radio"] {
+    margin-right: 5px;
+}

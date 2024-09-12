@@ -1,0 +1,111 @@
+@import url(styles.css);/*for getting the colour varibales*/
+
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+.image-text-container {
+    display: flex; /* Using flexbox for horizontal layout */
+    align-items: center; 
+    margin: 30px 0;
+    flex-direction: row-reverse;
+}
+
+.image-text-container img {
+    width: 600px; 
+    margin-right: 20px; /* Create space between the image and text */
+}
+
+.text-container {
+    flex-grow: 1; /* text container to expand to fill the remaining space */
+    text-align: left; 
+    font-size: 18px;
+}
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+  .image-text-container {
+      align-items: flex-start; /* Align items to the start (left) on smaller screens */
+  }
+  .centered-button{
+    display: none;
+  }
+  .image-2{
+    display:none;
+  }
+
+  .image-text-container img {
+      width: 100%; /* Make image take full width on smaller screens */
+      margin-right: 0; /* Remove right margin on smaller screens */
+  }
+}
+.services-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .centered-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 25%; 
+    text-align: center;
+  }
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    padding: 10px 20px;   
+    text-align: center;
+    font-size: 70px;
+    font-family: Comic Sans MS;
+    opacity: 0;
+    animation: fadeIn 15s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .centered-button {
+    text-align: center;
+    margin-top: 20px; 
+  }
+  
+  .centered-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;   
+  
+  }

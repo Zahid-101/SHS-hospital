@@ -1,0 +1,51 @@
+@import url(styles.css);/*for getting the colour varibales*/
+
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center; 
+  margin: 30px 0;
+}
+.map, .text {
+  flex-grow: 0; /* text container to expand to fill the remaining space */
+    text-align: left; 
+    font-size: 18px;
+}
+.map {
+  width: 600px; /* so the map doesn't overflow its container */
+  margin-right: 20px;
+}
+.text {
+  flex-grow: 0; /* text container to expand to fill the remaining space */
+    text-align: left; 
+    font-size: 18px;
+}
+.map-container {
+  height: 600px; /* Adjust height of the map */
+}
+h2 {
+  margin-top: 0;
+}
+  
+  .table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+  }
+  
+  .table-section th, .table-section td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .table-section tfoot td {
+    font-weight: bold;
+    background-color: var(--tertiary-color);
+    text-align: center;
+  }

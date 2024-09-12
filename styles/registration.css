@@ -1,0 +1,42 @@
+.separator1 {
+    height: 125px; 
+  }
+
+.registration-form {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-form input, .registration-form textarea, .registration-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    background-color: #007bff;
+    color: #fff;   
+
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form   
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+main img {
+    max-width: 100%;
+    height: auto;
+}

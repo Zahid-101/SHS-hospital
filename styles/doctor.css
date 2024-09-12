@@ -1,0 +1,31 @@
+.separator1 {
+    height: 125px; 
+  }
+
+.centered-heading {
+    text-align: center;
+  }
+  
+.short-heading {
+    font-size: 36px; 
+  }
+  
+.long-heading {
+    font-size: 24px; 
+  }
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr)); /* Adjust number of columns as needed */
+    gap: 20px;
+  }
+  
+  .doctor-card {
+    text-align: center;
+  }
+  
+  .doctor-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }

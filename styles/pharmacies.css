@@ -22,11 +22,6 @@
 h2 { 
     display: none; 
 }
-@media (max-width: 600px){
-    h2{
-        display: block;
-    }
-}
 .medicine-order-form {
     margin-top: 40px;
     padding: 20px;
@@ -35,8 +30,11 @@ h2 {
     border-radius: 5px;
 }
 
+#terms-and-conditions{
+    width: 50px ;
+}
+
 .medicine-order-form label {
-    display: block;
     margin-bottom: 5px;
 }
 
@@ -68,4 +66,14 @@ h2 {
 
 .medicine-order-form .radio-group input[type="radio"] {
     margin-right: 5px;
+}
+
+
+@media (max-width: 600px){
+    h2{
+        display: block;
+    }
+    .image-text-container img{
+        width: 100%;
+    }
 }

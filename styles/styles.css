@@ -9,7 +9,8 @@
 }
 @media (max-width: 600px) { 
     .image-text-container{
-        flex-direction: column !important; /* Stack image on top, puts text below and override anyother styles*/
+        flex-direction: column !important;/* Stack image on top, puts text below and override anyother styles*/
+        width: 100%;
     }
     .text-container{
         text-align: center !important; 
@@ -55,8 +56,7 @@ header .logo {
     padding: 10px;       /* padding,space inside the box */
     border: 2px solid var(--tertiary-color);
     background-color: var(--secondary-color);
-    border-radius: 5px;
-    margin-right: 100px;/*spacing between the search bar and emergency*/
+    border-radius: 5px; 
 }
 header .logo:hover{
     box-shadow: 0 0 30px rgba(0 , 123, 255, 0.6);
@@ -64,7 +64,7 @@ header .logo:hover{
 header .logo-wrapper{
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 header .logo-wrapper a {  
     text-decoration: none;  /* Removing the underline */
@@ -73,9 +73,11 @@ header .logo-wrapper a {
 header .search-icon{
     cursor: pointer;
     position: relative;
-    left: 200px;
-    bottom: 35px;
   }
+
+form {
+    display: flex;
+}
 
 .search {
     display: flex;
@@ -83,7 +85,6 @@ header .search-icon{
     position: relative;
     top: 15px;
     right: 20px;
-    margin-right: 100px;/*spacing between the logo and emergency tag*/
 }
 
 .search input {
@@ -112,8 +113,8 @@ header .search-icon{
     height: 2px; 
     background-color: #fff; 
     margin: 10px 0; /* separates away(gives space) from the header wrapper and nav bar */
-    margin-right: 40px;
   }
+
 header nav {
     display: flex;
     overflow: hidden;
@@ -140,8 +141,6 @@ header nav ul li a {
 header nav ul li a:hover {
     text-decoration: underline .15rem rgba(255, 255, 255, 1);
 }
-
-
 
 footer {
     background: #333;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHS Hospital - Home</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/pharmacies.css"/>
+    <link rel="stylesheet" href="styles/pharmacies.css" />
   </head>
   <body>
     <header>
@@ -43,60 +43,75 @@
     <main>
       <div class="separator1"></div>
       <section class="image-text-container">
-        <img src="pharmacy.jpg" alt="An image of the hospital pharmacy" />
+        <img src="images\pharmacy.jpg" alt="An image of the hospital pharmacy" />
         <div class="text-container">
           <h2>Our stores are available now!</h2>
           <p>
-            Our dedicated team of pharmacists will suit your needs wherever you are.
-           <br />We'll deliver your medicine right to your doorstep.
-             <br />We ensure and dedicate ourselves to the highest standards possible for your service.
+            Our dedicated team of pharmacists will suit your needs wherever you
+            are.
+            <br />We'll deliver your medicine right to your doorstep. <br />We
+            ensure and dedicate ourselves to the highest standards possible for
+            your service.
           </p>
         </div>
-        </section>
+      </section>
       <section class="medicine-order-form">
         <h3>Medicine order request form</h3>
         <p>We ship within 2 working days</p>
 
         <label for="full-name">Full Name:</label>
-        <input type="text" id="full-name" name="full-name" required>
+        <input type="text" id="full-name" name="full-name" required />
 
         <label for="contact-info">Email or Mobile Number:</label>
-        <input type="text" id="contact-info" name="contact-info" required>
+        <input type="text" id="contact-info" name="contact-info" required />
 
         <label for="medicine-choice">Select Medicine:</label>
         <select id="medicine-choice" name="medicine-choice">
-            <option value="Medicine 1">Penicillin</option>
-            <option value="Medicine 2">Paracetemol</option>
-            <option value="Medicine 3">Cetriset</option>
-        </select>   
-
+          <option value="Medicine 1">Penicillin</option>
+          <option value="Medicine 2">Paracetemol</option>
+          <option value="Medicine 3">Cetriset</option>
+        </select>
+         
 
         <label for="payment-method">Payment Method:</label>
         <select id="payment-method" name="payment-method">
-            <option value="Cash on Delivery">Cash on Delivery</option>
-            <option value="Card Payment">Card Payment</option>
+          <option value="Cash on Delivery">Cash on Delivery</option>
+          <option value="Card Payment">Card Payment</option>
         </select>
 
         <label for="delivery-method">Delivery Method:</label>
         <div class="radio-group">
-            <input type="radio" id="pickup-at-pharmacy" name="delivery-method" value="Pickup at Pharmacy" checked>
-            <label for="pickup-at-pharmacy">Pickup at Pharmacy</label>
-            <input type="radio" id="delivery" name="delivery-method" value="Delivery">
-            <label for="delivery">Delivery</label>
+          <input
+            type="radio"
+            id="pickup-at-pharmacy"
+            name="delivery-method"
+            value="Pickup at Pharmacy"
+            checked
+          />
+          <label for="pickup-at-pharmacy">Pickup at Pharmacy</label>
+          <input
+            type="radio"
+            id="delivery"
+            name="delivery-method"
+            value="Delivery"
+          />
+          <label for="delivery">Delivery</label>
         </div>
 
         <label for="address">Address (for Delivery):</label>
-        <input type="text" id="address" name="address" required>
-
+        <input type="text" id="address" name="address" required />
+      <div>
+        <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required/>
         <label for="terms-and-conditions">
-            <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
-            I agree to the Terms and Conditions
-        </label>   
+          I agree to the Terms and Conditions
+        </label>
+      </div>
+         
 
         <p><a href="#">Read our Terms and Conditions</a></p>
 
         <button type="submit">Submit</button>
-    </section>
+      </section>
     </main>
 
     <footer>

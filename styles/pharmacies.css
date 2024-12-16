@@ -2,78 +2,533 @@
 .separator1 {
     height: 125px; 
   }
-.image-text-container {
-    display: flex; /* Using flexbox for horizontal layout */
-    align-items: center; 
-    margin: 30px 0;
-    flex-direction: row-reverse/*to flip the layout*/
+  
+@keyframes LoadIn{
+    0%{
+        opacity:0;
+        transform:scale(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
 }
 
-.image-text-container img {
-    width: 600px; 
-    margin-right: 20px; /* Create space between the image and text */
+@keyframes LoadOut{
+    100%{
+        opacity:0;
+        transform:scale(0.5);
+    }
+    0%{
+        opacity: 1;
+        transform:scale(1);
+    }
 }
 
-.text-container {
-    flex-grow: 1; /* text container to expand to fill the remaining space */
-    text-align: left; 
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(255, 252, 252);
+
+}
+
+.banner .text{
+    padding: 0;
+    background-size: cover;
+    background: linear-gradient(to right,rgb(139, 24, 233),rgb(19, 239, 173) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 60px;
+    background:rgb(31, 33, 60);
+    padding: 15px;
+}
+
+
+
+.topnav{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.topnav a{
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: all 0.3s ;
+}
+
+.topnavcont svg,.topnavcont input{
+    display: none;
+}
+
+.topnav:hover > a, .topnav:hover>.dropdown{
+    opacity: 0.3;
+}
+
+.topnav:hover > a:hover, .topnav:hover>.dropdown:hover{
+    opacity: 1;
+    transform: translateY(-10px);
+    color: rgb(30, 208, 95);
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ;
+    z-index: 2;
+}
+
+.dropdown a{
+    display: inline-block;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+.dropcontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover{
+    color: rgb(87, 241, 85);
+}
+
+
+.dropcontent a:hover {color:rgb(87, 241, 85)}
+
+.dropdown:hover .dropcontent {display: block;}
+
+h2{
+    font-family: poppins;
+    margin-bottom:40px ;
+}
+.card{
+    font-family: poppins;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    min-width: 250px;
+    height: fit-content;
+    transition: 0.5s ;
+    box-shadow: 10px 10px 10px #29292955;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card:hover .counter, .card:active .counter{
+    height: 17px;
+    opacity: 1;
+}
+
+.card .counter{
+    font-family: 'poppins';
+    border-radius: 20px;
+    border: 0;
+    height: 0;
+    opacity: 0;
+    width: 50px;
+    transition: 0.2s;
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.card .desc{
+    background-color:#1f213c ;
+    width: 100%;
+    height: 20%;
+    align-self: flex-end;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'poppins';
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.card .img img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    max-width: 250px;
+}
+.card .img{
+    height: 100%;
+    width: 100%;    
+    transition: 0.5s;
+}
+
+
+.btn{
+    border: 0;
+    border-radius: 10px;
+    width: 40px;
+    height: 20px;
+    margin: 10px 0px 10px 0px;
+    font-family: poppins;
+    font-size: 15px;
+    line-height: 0;
+    background: transparent;
+    color: #ffffff;
+}
+
+.elmCont{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 100px;
+    overflow: auto;
+    padding: 20px;
+}
+
+.img{
+    width:100%;
+    height:60%;
+}
+
+.acImg{
+    width: 100%;
+    height: 100%;;
+}
+
+.price{
+    color: rgba(255, 255, 255, 0.552);
+}
+
+#payport{
+    border: 0;
+    font-family: poppins;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    background: #138365;
+    color: aliceblue;
+}
+
+.focontainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+}
+
+.FullOrder{
+    height: 0px;
+    overflow-y: scroll;    
+    border-radius: 20px;
+    transition: 0.5s;
+    margin:40px ;
+}
+table{
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    max-width: 550px;
+    border: 1px black;
+    font-family: 'poppins';
+    background:white;
+    font-size: 20px;
+}
+
+table tr th{
+    font-size: 18px;
+    text-align: center;
+    max-width: 25%;
+}
+
+table tr td input{
+    border: 0;  
+    border-radius: 20px;
+    background: rgba(95, 230, 47, 0.63);
+    width: 50px !important;
+    font-family: poppins;
     font-size: 18px;
 }
-h2 { 
-    display: none; 
+
+
+table tbody tr td{
+    text-wrap: wrap;
+    border: 0;
+    border-bottom:4px solid #138365;
+    max-width: 25%;
+    padding: 25px;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s;
 }
-.medicine-order-form {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+table tbody tr  button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #ec1c1c;
+    border: 0;
+    color: #ffffff;
+    aspect-ratio: 1/1;
+    width: 22px;
+    font-size: 20px;
+    font-family: poppins;
+    line-height: 0;
 }
 
-#terms-and-conditions{
-    width: 50px ;
+table tfoot tr td{
+    border:0;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom:4px solid #138365;
+    padding:20px;
 }
 
-.medicine-order-form label {
-    margin-bottom: 5px;
+
+table tr th{
+    border: 0;
+    border-bottom:4px solid #7c1383;
 }
 
-.medicine-order-form input, .medicine-order-form textarea, .medicine-order-form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+table tbody tr{
+    border-bottom:4px solid #138365;
 }
 
-.medicine-order-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+
+table img{
+    max-height: 1400px;
+    max-width: 140px;
+    min-width: 100px;
 }
 
-.medicine-order-form p {
-    margin-bottom: 10px;
-    color: #666;
-}
 
-.medicine-order-form .radio-group {
+.set {
+    font-size: 19px;
+    font-family: 'poppins';
+    display: grid;
+    row-gap: 10px;
+    margin-top: 20px;
+  }
+
+.EvWrapper{
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
-.medicine-order-form .radio-group input[type="radio"] {
-    margin-right: 5px;
+.subheading {
+    text-align: left;
+    font-family: 'poppins';
+    color: #138365;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 0;
+  }
+
+  input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], form select {
+    width: 200px;
+    height: 24px;
+    border-radius: 8px;
+    border-style: solid;
+    background-color: rgba(123, 221, 87, 0.907);
+    border: 0;
+    font-family: 'poppins';
+    font-size: 18px;
+    color: white;
+  }
+
+
+#carddeets{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
+.show{
+    height: 300px !important;
+}
 
-@media (max-width: 600px){
-    h2{
-        display: block;
+.showLarger{
+    height: 400px;
+}
+
+#openbtn{
+    position: fixed;
+    top: 17px;
+    right: 20px;
+    border: 0;
+    border-radius: 20px;
+    background: transparent;
+}
+
+.after{
+    font-size: 30px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.orderbtn{
+    border: 0;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px;
+    font-family: "Montserrat";
+    background: #9482f0;
+    color: #FFFFFF;
+}
+
+.btnwrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+#submit{
+    font-weight: 600;
+    background: rgb(53, 219, 69);
+    color: #FFFFFF;
+}
+
+#openbtn{
+    background: #4d5299;
+}
+
+@media (max-width:750px){
+    .banner{
+        position: relative;
+        z-index: 4;
     }
-    .image-text-container img{
+    .topnav {
+        padding:10px ;
+        background-color: #ffffff;
+        flex-direction: column;
+        width:60% ;
+        gap: 5px;
+        padding-top: 10px;
+        text-align: center;
+        display: flex;
+        position: absolute;
+        transform: translateY(-400px);
+        transition: 0.5s;
+    }
+
+    .topnav a{
+        color: black;
+    }
+
+    .botnav{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+
+    .topnavcont svg{
+        padding: 2px;
+        background-color: #ffffff;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 47%;
+        transform: rotate(0deg);
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+
+    .topnav .dropcontent{
+        position: static;
+    }
+
+    .topnavcont svg:active{
+        transform: rotate(90deg);
+    }
+
+
+    .topnavcont{
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .topnavcont input{
+        display: none;
+        position: absolute;
+        left: 49%;
+        z-index: 3;
+    }
+
+
+    .topnavcont input:checked~.topnav{
+        transform: translateY(0);
+        
+    }
+
+    table th{
+        display: none;
+    }
+
+    table{
         width: 100%;
     }
+    table tbody tr, table tfoot tr{
+        border-bottom: 3px solid #474df0;
+        width: 100%;
+    }
+
+    table tbody tr td,table tfoot tr td{
+        max-width: unset;
+        text-align: center;
+        border: 0;
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: .625em;
+        border: 0;
+      }
+      
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        border: 0;
+      }
+      
+      .hide{
+        display: none;
+      }
+
+    .EvWrapper{
+        flex-wrap: wrap;
+        margin: 50px;
+        gap: 50px;
+    }
+
 }
